@@ -14,8 +14,8 @@ Library Used:
 3. Styled-Components (css in javascript)
 
 Design Pattern: 
-1: Separation of Concern
+1. Separation of Concern
     * Each components file should match styled-components files in same folder sturcture
-2: This is responsive game
+2. This is responsive game
 
 Have Fun Playing the Tic-Tac-Toe Game
