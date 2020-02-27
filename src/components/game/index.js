@@ -35,6 +35,19 @@ class Game extends React.Component{
     this.setState(this.baseState)
   }
 
+  handleBoardRefresh = () => {
+    this.setState({
+      squares: Array(9).fill(null),
+      move: '',
+      winner: ''
+    })
+  }
+
+  handleAlert = () => {
+    const playerAlert = this.state.players.length === 1 ? `Please Enter Second Player's Name`: `Please Enter First Player's Name`
+    alert(playerAlert)
+  }
+
   handleWinner = () => {
     const { squares, players } = this.state
     let calculateWinner = [
@@ -84,6 +97,7 @@ class Game extends React.Component{
                 value = {value}
                 handlePlayerName = {this.handlePlayerName}
                 handleSubmitPlayer = {this.handleSubmitPlayer}
+                handleAlert = {this.handleAlert}
                 /> }
             />
             <Route exact path='/Game' 
@@ -92,6 +106,7 @@ class Game extends React.Component{
                   {...this.state}
                   handleUserClick = {this.handleUserClick}
                   handleBoardReset = {this.handleBoardReset}
+                  handleBoardRefresh = {this.handleBoardRefresh}
                 />
               }
             />

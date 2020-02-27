@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Wrapper, PlayerInputWrapper, PlayerInput, SubmitBtn } from '../../../styled-components/game/players/style'
+
 const getPlayers = (props) => {
-  const { value, players, handlePlayerName, handleSubmitPlayer  } = props
+  const { value, players, handlePlayerName, handleSubmitPlayer, handleAlert } = props
   const playerHeader = players.filter(p => p).join(' vs. ')
   const message = `${players.length === 1 ? 'Next, e' : 'E'}nter a name for player number ${players.length + 1}`
+  
   return (
     <Container>
       <Wrapper>
@@ -36,8 +38,11 @@ const getPlayers = (props) => {
                   type = 'submit'
                   value = "Submit"
                   onClick = {() => { 
-                    if(value)
+                    if(value){
                       handleSubmitPlayer()
+                    }else{
+                      handleAlert()
+                    }
                   }}
                 />
               </PlayerInputWrapper>

@@ -1,29 +1,35 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+  width: calc(100vw - 9rem);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center
 `
-
 export const BoardStyle = styled.div`
-  width: 246px;
-  height: 246px;
+  width: 260px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap
 `
-
 export const SqureStyle = styled.div`
   width: 80px;
   height: 80px;
-  border: 1px solid green;
+  border: 3px solid #7E7A8F;
+  color: #5acdef;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
 `
-
+export const SubmitWrapper = styled.div`
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+`
 export const SubmitBtn = styled.input`
   font-size: .75rem;
   line-height: 1;
@@ -32,6 +38,7 @@ export const SubmitBtn = styled.input`
   text-align: center;
   color: #000000;
   padding: 0.5em 1em;
+  margin-top: 20px;
   line-height: 1;
   cursor: pointer;
   border: 0.3rem solid #FFFFFF;
