@@ -1,5 +1,5 @@
 Project Setup:
-1. Unzip the project and open the folder on IDE.
+1. Unzip the project and open the folder in IDE.
 2. Run the command 'npm install' to install all the dependencies.
 3. Launch the project by type in 'yarn start' or 'npm start' on command line
 
